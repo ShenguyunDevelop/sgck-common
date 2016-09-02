@@ -37,180 +37,230 @@ public class User implements Serializable
 	
 	private Integer monthLogin;//当月登录次数
 	private Integer companytype;//单位类型;0表示导航树单位,否则是手动输入
-	
-	public Integer getId() {
+	public Integer getId()
+	{
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(Integer id)
+	{
 		this.id = id;
 	}
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
-	public void setName(String name) {
+	public void setName(String name)
+	{
 		this.name = name;
 	}
-	public String getPassword() {
+	public String getPassword()
+	{
 		return password;
 	}
-	public void setPassword(String password) {
+	public void setPassword(String password)
+	{
 		this.password = password;
 	}
-
-	public Integer getRoleid() {
-		return roleid;
-	}
-	public void setRoleid(Integer roleid) {
-		this.roleid = roleid;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getWechatid() {
-		return wechatid;
-	}
-	public void setWechatid(String wechatid) {
-		this.wechatid = wechatid;
-	}
-	public String getRemark() {
-		return remark;
-	}
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
-	public Date getCreatetime() {
-		return createtime;
-	}
-	public void setCreatetime(Date createtime) {
-		this.createtime = createtime;
-	}
-	public String getConfigs() {
-		return configs;
-	}
-	public void setConfigs(String configs) {
-		this.configs = configs;
-	}
-	public String getHeadimgurl() {
-		return headimgurl;
-	}
-	public void setHeadimgurl(String headimgurl) {
-		this.headimgurl = headimgurl;
-	}
-	public String getLoginip() {
-		return loginip;
-	}
-	public void setLoginip(String loginip) {
-		this.loginip = loginip;
-	}
-	public Integer getLogincount() {
-		return logincount;
-	}
-	public void setLogincount(Integer logincount) {
-		this.logincount = logincount;
-	}
-	public String getExtra() {
-		return extra;
-	}
-	public void setExtra(String extra) {
-		this.extra = extra;
-	}
-	public String getActions() {
-		return actions;
-	}
-	public void setActions(String actions) {
-		this.actions = actions;
-	}
-	public Integer getRolelevel() {
-		return rolelevel;
-	}
-	public void setRolelevel(Integer rolelevel) {
-		this.rolelevel = rolelevel;
-	}
-	public String getUserPushConfig() {
-		return userPushConfig;
-	}
-	public void setUserPushConfig(String userPushConfig) {
-		this.userPushConfig = userPushConfig;
-	}
-	public String getUsername() {
+	public String getUsername()
+	{
 		return username;
 	}
-	public void setUsername(String username) {
+	public void setUsername(String username)
+	{
 		this.username = username;
 	}
-
-	public Date getDeadline() {
-		return deadline;
+	public Integer getRoleid()
+	{
+		return roleid;
 	}
-	public void setDeadline(Date deadline) {
-		this.deadline = deadline;
+	public void setRoleid(Integer roleid)
+	{
+		this.roleid = roleid;
 	}
-	public String getPhonenumber() {
+	public String getPhonenumber()
+	{
 		return phonenumber;
 	}
-	public void setPhonenumber(String phonenumber) {
+	public void setPhonenumber(String phonenumber)
+	{
 		this.phonenumber = phonenumber;
 	}
-	public String getLandlinephone() {
+	public String getLandlinephone()
+	{
 		return landlinephone;
 	}
-	public void setLandlinephone(String landlinephone) {
+	public void setLandlinephone(String landlinephone)
+	{
 		this.landlinephone = landlinephone;
 	}
-	public String getCompany() {
+	public String getCompany()
+	{
 		return company;
 	}
-	public void setCompany(String company) {
+	public void setCompany(String company)
+	{
 		this.company = company;
 	}
-	public String getPost() {
+	public String getPost()
+	{
 		return post;
 	}
-	public void setPost(String post) {
+	public void setPost(String post)
+	{
 		this.post = post;
 	}
-	public Date getLogintime() {
+	public String getEmail()
+	{
+		return email;
+	}
+	public void setEmail(String email)
+	{
+		this.email = email;
+	}
+	public String getWechatid()
+	{
+		return wechatid;
+	}
+	public void setWechatid(String wechatid)
+	{
+		this.wechatid = wechatid;
+	}
+	public String getRemark()
+	{
+		return remark;
+	}
+	public void setRemark(String remark)
+	{
+		this.remark = remark;
+	}
+	public Date getCreatetime()
+	{
+		return createtime;
+	}
+	public void setCreatetime(Date createtime)
+	{
+		this.createtime = createtime;
+	}
+	public Date getLogintime()
+	{
 		return logintime;
 	}
-	public void setLogintime(Date logintime) {
+	public void setLogintime(Date logintime)
+	{
 		this.logintime = logintime;
 	}
-	public String getStrphoneinfo() {
+	public String getConfigs()
+	{
+		return configs;
+	}
+	public void setConfigs(String configs)
+	{
+		this.configs = configs;
+	}
+	public String getHeadimgurl()
+	{
+		return headimgurl;
+	}
+	public void setHeadimgurl(String headimgurl)
+	{
+		this.headimgurl = headimgurl;
+	}
+	public String getLoginip()
+	{
+		return loginip;
+	}
+	public void setLoginip(String loginip)
+	{
+		this.loginip = loginip;
+	}
+	public Integer getLogincount()
+	{
+		return logincount;
+	}
+	public void setLogincount(Integer logincount)
+	{
+		this.logincount = logincount;
+	}
+	public String getExtra()
+	{
+		return extra;
+	}
+	public void setExtra(String extra)
+	{
+		this.extra = extra;
+	}
+	public String getActions()
+	{
+		return actions;
+	}
+	public void setActions(String actions)
+	{
+		this.actions = actions;
+	}
+	public Integer getRolelevel()
+	{
+		return rolelevel;
+	}
+	public void setRolelevel(Integer rolelevel)
+	{
+		this.rolelevel = rolelevel;
+	}
+	public String getStrphoneinfo()
+	{
 		return strphoneinfo;
 	}
-	public void setStrphoneinfo(String strphoneinfo) {
+	public void setStrphoneinfo(String strphoneinfo)
+	{
 		this.strphoneinfo = strphoneinfo;
 	}
-	public ASObject getPhoneinfo() {
+	public String getUserPushConfig()
+	{
+		return userPushConfig;
+	}
+	public void setUserPushConfig(String userPushConfig)
+	{
+		this.userPushConfig = userPushConfig;
+	}
+	public Date getDeadline()
+	{
+		return deadline;
+	}
+	public void setDeadline(Date deadline)
+	{
+		this.deadline = deadline;
+	}
+	public ASObject getPhoneinfo()
+	{
 		return phoneinfo;
 	}
-	public void setPhoneinfo(ASObject phoneinfo) {
+	public void setPhoneinfo(ASObject phoneinfo)
+	{
 		this.phoneinfo = phoneinfo;
 	}
-	public int getMonthLogin() {
-		return monthLogin;
-	}
-	public void setMonthLogin(int monthLogin) {
-		this.monthLogin = monthLogin;
-	}
-	public String getDepartment() {
+	public String getDepartment()
+	{
 		return department;
 	}
-	public void setDepartment(String department) {
+	public void setDepartment(String department)
+	{
 		this.department = department;
 	}
-	public void setMonthLogin(Integer monthLogin) {
+	public Integer getMonthLogin()
+	{
+		return monthLogin;
+	}
+	public void setMonthLogin(Integer monthLogin)
+	{
 		this.monthLogin = monthLogin;
 	}
-	public Integer getCompanytype() {
+	public Integer getCompanytype()
+	{
 		return companytype;
 	}
-	public void setCompanytype(Integer companytype) {
+	public void setCompanytype(Integer companytype)
+	{
 		this.companytype = companytype;
 	}
-
+	
+	
 }

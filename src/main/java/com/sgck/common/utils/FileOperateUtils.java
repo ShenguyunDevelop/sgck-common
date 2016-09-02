@@ -504,16 +504,31 @@ public class FileOperateUtils {
 	 * @return
 	 */
 	public static void writeFile(String filename, ASObject rpcObj) {
+		OutputStream outs = null;
+		ObjectOutputStream oos = null;
 		try {
-			OutputStream outs = new FileOutputStream(new File(filename));
-			ObjectOutputStream oos = new ObjectOutputStream(outs);
-			oos.writeObject(rpcObj);
-			oos.close();
-			outs.close();
+			 outs = new FileOutputStream(new File(filename));
+			 oos = new ObjectOutputStream(outs);
+			 oos.writeObject(rpcObj);
 		} catch (FileNotFoundException ex) {
 			DSLogger.error("ds::hanldeClientReq...File" + filename + " not found :" + ex.getMessage());
 		} catch (IOException ex) {
 			DSLogger.error("ds::hanldeClientReq...File" + filename + " IOException: " + ex.getMessage());
+		}finally {
+			if(null!=oos){
+				try {
+					oos.close();
+				} catch (IOException e) {
+					DSLogger.error("ds::hanldeClientReq...File" + filename + " oos close ex :" + e.getMessage());
+				}
+			}
+			if(null!=outs){
+				try {
+					outs.close();
+				} catch (IOException e) {
+					DSLogger.error("ds::hanldeClientReq...File" + filename + " outs close ex :" + e.getMessage());
+				}
+			}
 		}
 	}
 
