@@ -1,8 +1,10 @@
 package com.sgck.common.domain;
 
+import java.io.Serializable;
+
 import com.alibaba.fastjson.JSONObject;
 
-public class WxMessageContent
+public class WxMessageContent implements Serializable
 {
 
 	private String templateId;//模板ID
