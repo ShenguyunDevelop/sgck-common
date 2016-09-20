@@ -265,4 +265,9 @@ public class DateUtil {
 		Long targetTime = date.getTime() - sourceTimeZone.getRawOffset() + targetTimeZone.getRawOffset();
 		return new Date(targetTime);
 	}
+	
+	public final static int deff(Date sdate, Date edate) {
+		long diff = edate.getTime() - sdate.getTime();
+		return (int)diff/(60*60*1000*24);
+	}
 }
