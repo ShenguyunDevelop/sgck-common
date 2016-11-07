@@ -230,6 +230,21 @@ public class RoleActionsConst
 		sg8kAction51200Child.add(sg8kAction51201);
 
 		sg8kAction51200.put("children", sg8kAction51200Child);
+		
+		//机芯管理权限添加
+		ASObject sg8kAction51300 = new ASObject();
+		sg8kAction51300.put("id", 51300);
+		sg8kAction51300.put("name", "机芯设置");
+		sg8kAction51300.put("parentId", 50000);
+
+		List<ASObject> sg8kAction51300Child = new ArrayList();
+		ASObject sg8kAction51301 = new ASObject();
+		sg8kAction51301.put("id", 51301);
+		sg8kAction51301.put("name", "访问");
+		sg8kAction51301.put("parentId", 51300);
+		sg8kAction51300Child.add(sg8kAction51301);
+		sg8kAction51300.put("children", sg8kAction51300Child);
+		
 
 		ASObject sg8kAction4051300 = new ASObject();
 		sg8kAction4051300.put("id", 4051300);
@@ -274,6 +289,7 @@ public class RoleActionsConst
 		sg8kAction50000Child.add(sg8kAction50100);
 		sg8kAction50000Child.add(sg8kAction50900);
 		sg8kAction50000Child.add(sg8kAction51000);
+		sg8kAction50000Child.add(sg8kAction51300);
 		sg8kAction50000Child.add(sg8kAction4051300);
 		sg8kAction50000Child.add(sg8kAction4051400);
 		sg8kAction50000.put("children", sg8kAction50000Child);
@@ -525,7 +541,7 @@ public class RoleActionsConst
 		sg8kAction10801.put("parentId", 10800);
 		sg8kAction10800Child.add(sg8kAction10801);
 		sg8kAction10800.put("children", sg8kAction10800Child);
-		
+
 		ASObject sg8kAction10900 = new ASObject();
 		sg8kAction10900.put("id", 10900);
 		sg8kAction10900.put("name", "性能分析曲线");
@@ -549,7 +565,7 @@ public class RoleActionsConst
 		sg8kAction120301.put("parentId", 120300);
 		sg8kAction120300Child.add(sg8kAction120301);
 		sg8kAction120300.put("children", sg8kAction120300Child);
-		
+
 		ASObject sg8kAction130300 = new ASObject();
 		sg8kAction130300.put("id", 130300);
 		sg8kAction130300.put("name", "三维全息图谱");
@@ -561,10 +577,9 @@ public class RoleActionsConst
 		sg8kAction130301.put("parentId", 130300);
 		sg8kAction130300Child.add(sg8kAction130301);
 		sg8kAction130300.put("children", sg8kAction130300Child);
-		
 
 		List<ASObject> sg8kAction10000Child = new ArrayList();
-		
+
 		sg8kAction10000Child.add(sg8kAction130300);
 		sg8kAction10000Child.add(sg8kAction120300);
 		sg8kAction10000Child.add(sg8kAction10900);
@@ -575,6 +590,7 @@ public class RoleActionsConst
 		sg8kAction10000Child.add(sg8kAction10400);
 		sg8kAction10000Child.add(sg8kAction10300);
 		sg8kAction10000Child.add(sg8kAction10200);
+		sg8kAction10000Child.add(sg8kAction10100);
 		sg8kAction10000.put("children", sg8kAction10000Child);
 		/**
 		 * 常规图谱
@@ -841,34 +857,40 @@ public class RoleActionsConst
 
 		sg8kAction50500.put("children", sg8kAction50500Child);
 
-		/*
-		 * ASObject sg8kAction50200 = new ASObject(); sg8kAction50200.put("id",
-		 * 50200); sg8kAction50200.put("name", "总貌图设置");
-		 * sg8kAction50200.put("parentId", 50000);
-		 * 
-		 * List<ASObject> sg8kAction50200Child = new ArrayList(); ASObject
-		 * sg8kAction50201 = new ASObject(); sg8kAction50201.put("id", 50201);
-		 * sg8kAction50201.put("name", "访问"); sg8kAction50201.put("parentId",
-		 * 50200);
-		 * 
-		 * ASObject sg8kAction50202 = new ASObject(); sg8kAction50202.put("id",
-		 * 50202); sg8kAction50202.put("name", "添加");
-		 * sg8kAction50202.put("parentId", 50200);
-		 * 
-		 * ASObject sg8kAction50203 = new ASObject(); sg8kAction50203.put("id",
-		 * 50203); sg8kAction50203.put("name", "删除");
-		 * sg8kAction50203.put("parentId", 50200);
-		 * 
-		 * ASObject sg8kAction50204 = new ASObject(); sg8kAction50204.put("id",
-		 * 50204); sg8kAction50204.put("name", "修改");
-		 * sg8kAction50204.put("parentId", 50200);
-		 * sg8kAction50200Child.add(sg8kAction50201);
-		 * sg8kAction50200Child.add(sg8kAction50202);
-		 * sg8kAction50200Child.add(sg8kAction50203);
-		 * sg8kAction50200Child.add(sg8kAction50204);
-		 * 
-		 * sg8kAction50200.put("children", sg8kAction50200Child);
-		 */
+		
+		ASObject sg8kAction50200 = new ASObject();
+		sg8kAction50200.put("id", 50200);
+		sg8kAction50200.put("name", "总貌图设置");
+		sg8kAction50200.put("parentId", 50000);
+
+		List<ASObject> sg8kAction50200Child = new ArrayList();
+		/**
+		ASObject sg8kAction50201 = new ASObject();
+		sg8kAction50201.put("id", 50201);
+		sg8kAction50201.put("name", "访问");
+		sg8kAction50201.put("parentId", 50200);
+        **/
+		ASObject sg8kAction50202 = new ASObject();
+		sg8kAction50202.put("id", 50202);
+		sg8kAction50202.put("name", "添加");
+		sg8kAction50202.put("parentId", 50200);
+
+		ASObject sg8kAction50203 = new ASObject();
+		sg8kAction50203.put("id", 50203);
+		sg8kAction50203.put("name", "删除");
+		sg8kAction50203.put("parentId", 50200);
+
+		ASObject sg8kAction50204 = new ASObject();
+		sg8kAction50204.put("id", 50204);
+		sg8kAction50204.put("name", "修改");
+		sg8kAction50204.put("parentId", 50200);
+		//sg8kAction50200Child.add(sg8kAction50201);
+		sg8kAction50200Child.add(sg8kAction50202);
+		sg8kAction50200Child.add(sg8kAction50203);
+		sg8kAction50200Child.add(sg8kAction50204);
+
+		sg8kAction50200.put("children", sg8kAction50200Child);
+		
 
 		ASObject sg8kAction50400 = new ASObject();
 		sg8kAction50400.put("id", 50400);
@@ -1035,7 +1057,7 @@ public class RoleActionsConst
 		 * 
 		 * sg8kAction51000.put("children", sg8kAction51000Child);
 		 */
-		
+
 		ASObject sg8kAction51300 = new ASObject();
 		sg8kAction51300.put("id", 51300);
 		sg8kAction51300.put("name", "气动分析设置");
@@ -1048,7 +1070,6 @@ public class RoleActionsConst
 		sg8kAction51301.put("parentId", 51300);
 		sg8kAction51300Child.add(sg8kAction51301);
 		sg8kAction51300.put("children", sg8kAction51300Child);
-		
 
 		ASObject sg8kAction50600 = new ASObject();
 		sg8kAction50600.put("id", 50600);
@@ -1126,7 +1147,7 @@ public class RoleActionsConst
 		sg8kAction50000Child.add(sg8kAction51100);
 		// sg8kAction50000Child.add(sg8kAction51200);
 		sg8kAction50000Child.add(sg8kAction51300);
-		
+
 		sg8kAction50000.put("children", sg8kAction50000Child);
 		/**
 		 * 设置模块
@@ -1245,27 +1266,27 @@ public class RoleActionsConst
 		/**
 		 * 试车模块
 		 */
-//		ASObject sg8kAction90000 = new ASObject();
-//		sg8kAction90000.put("id", 90000);
-//		sg8kAction90000.put("name", "试车模块");
-//		sg8kAction90000.put("parentId", 2000000);
-//
-//		ASObject sg8kAction90100 = new ASObject();
-//		sg8kAction90100.put("id", 90100);
-//		sg8kAction90100.put("name", "数据管理");
-//		sg8kAction90100.put("parentId", 90000);
-//		List<ASObject> sg8kAction90100Child = new ArrayList();
-//		ASObject sg8kAction90101 = new ASObject();
-//		sg8kAction90101.put("id", 90101);
-//		sg8kAction90101.put("name", "访问");
-//		sg8kAction90101.put("parentId", 90100);
-//		sg8kAction90100Child.add(sg8kAction90101);
-//		sg8kAction90100.put("children", sg8kAction90100Child);
-//
-//		List<ASObject> sg8kAction90000Child = new ArrayList();
-//		sg8kAction90000Child.add(sg8kAction90100);
-//
-//		sg8kAction90000.put("children", sg8kAction90000Child);
+		// ASObject sg8kAction90000 = new ASObject();
+		// sg8kAction90000.put("id", 90000);
+		// sg8kAction90000.put("name", "试车模块");
+		// sg8kAction90000.put("parentId", 2000000);
+		//
+		// ASObject sg8kAction90100 = new ASObject();
+		// sg8kAction90100.put("id", 90100);
+		// sg8kAction90100.put("name", "数据管理");
+		// sg8kAction90100.put("parentId", 90000);
+		// List<ASObject> sg8kAction90100Child = new ArrayList();
+		// ASObject sg8kAction90101 = new ASObject();
+		// sg8kAction90101.put("id", 90101);
+		// sg8kAction90101.put("name", "访问");
+		// sg8kAction90101.put("parentId", 90100);
+		// sg8kAction90100Child.add(sg8kAction90101);
+		// sg8kAction90100.put("children", sg8kAction90100Child);
+		//
+		// List<ASObject> sg8kAction90000Child = new ArrayList();
+		// sg8kAction90000Child.add(sg8kAction90100);
+		//
+		// sg8kAction90000.put("children", sg8kAction90000Child);
 		/**
 		 * 试车模块
 		 */
@@ -1396,11 +1417,11 @@ public class RoleActionsConst
 		actionDetail2Child.add(sg8kAction30000);
 		actionDetail2Child.add(sg8kAction40000);
 		actionDetail2Child.add(sg8kAction50000);
-		
+
 		actionDetail2Child.add(sg8kAction61000);
 		actionDetail2Child.add(sg8kAction70000);
 		actionDetail2Child.add(sg8kAction80000);
-		//actionDetail2Child.add(sg8kAction90000);
+		// actionDetail2Child.add(sg8kAction90000);
 		actionDetail2Child.add(sg8kAction100000);
 		actionDetail2Child.add(sg8kAction110000);
 		// actionDetail2Child.add(sg8kAction120000);
