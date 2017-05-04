@@ -112,6 +112,22 @@ public class DateUtil {
 		return dayBefore;
 	}
 
+	public static String getSpecifiedDayAfter(String specifiedDay) {
+		Calendar c = Calendar.getInstance();
+		Date date = null;
+		try {
+			date = new SimpleDateFormat("yy-MM-dd").parse(specifiedDay);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		c.setTime(date);
+		int day = c.get(Calendar.DATE);
+		c.set(Calendar.DATE, day + 1);
+
+		String dayBefore = new SimpleDateFormat("yyyy-MM-dd").format(c.getTime());
+		return dayBefore;
+	}
+
 	/**
 	 * 往后加n天
 	 * 
@@ -265,9 +281,9 @@ public class DateUtil {
 		Long targetTime = date.getTime() - sourceTimeZone.getRawOffset() + targetTimeZone.getRawOffset();
 		return new Date(targetTime);
 	}
-	
+
 	public final static int deff(Date sdate, Date edate) {
 		long diff = edate.getTime() - sdate.getTime();
-		return (int)diff/(60*60*1000*24);
+		return (int) diff / (60 * 60 * 1000 * 24);
 	}
 }
